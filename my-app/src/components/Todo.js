@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Todo({ todo }) {
-//     function handleRemoveClick() {
-//         removeTodo(todo.id);
-//     }
+function Todo({ todo, removeTodo }) {
+    function handleRemoveClick() {
+        removeTodo(todo.id);
+    }
 
     return (
         <div style={{ display: "flex" }}>
@@ -14,7 +14,7 @@ function Todo({ todo }) {
             >
                 {todo.task}
             </li>
-            <button>X</button>
+            <button onClick={handleRemoveClick}>X</button>
         </div>
     );
 }

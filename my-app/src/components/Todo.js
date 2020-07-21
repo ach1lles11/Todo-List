@@ -1,4 +1,6 @@
 import React from 'react';
+import { IconButton, ListItem, Typography } from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
 
 function Todo({ todo, removeTodo }) {
     function handleRemoveClick() {
@@ -6,16 +8,14 @@ function Todo({ todo, removeTodo }) {
     }
 
     return (
-        <div style={{ display: "flex" }}>
-            <li 
-                style={{
-                    color: "white"
-                }}
-            >
+        <ListItem style={{ display: "flex" }}>
+            <Typography variant='body1'>
                 {todo.task}
-            </li>
-            <button onClick={handleRemoveClick}>X</button>
-        </div>
+            </Typography>
+            <IconButton onClick={handleRemoveClick}>
+                <CloseIcon />
+            </IconButton>
+        </ListItem>
     );
 }
 

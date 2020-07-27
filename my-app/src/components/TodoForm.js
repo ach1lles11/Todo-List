@@ -5,8 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 function TodoForm({ addTodo }) {
     const [todo, setTodo] = useState({
         id: "",
-        task: "",
-        completed: false
+        task: ""
     })
 
     function handleTaskInputChange(e) {

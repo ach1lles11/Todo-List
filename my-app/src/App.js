@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 
 const LOCAL_STORAGE_KEY = 'react-todo-list-todos';
 
-function App() {  
+const App = () => {  
   const[todos, setTodos] = useState([]);
 
   useEffect(() => {
@@ -20,11 +20,11 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
 
-  function addTodo(todo) {
+  const addTodo = (todo) => {
     setTodos([todo, ...todos]);
   }
 
-  function removeTodo(id) {
+  const removeTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id));
   }
 

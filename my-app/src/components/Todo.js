@@ -2,8 +2,8 @@ import React from 'react';
 import { IconButton, ListItem, Typography } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 
-function Todo({ todo, removeTodo }) {
-    function handleRemoveClick() {
+const Todo = ({ todo, removeTodo }) => {
+    const handleRemoveClick = () => {
         removeTodo(todo.id);
     }
 
@@ -17,6 +17,6 @@ function Todo({ todo, removeTodo }) {
             </IconButton>
         </ListItem>
     );
-}
+};
 
 export default Todo;
